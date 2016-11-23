@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/23 07:57:50 by bfleury           #+#    #+#             */
-/*   Updated: 2016/11/23 08:09:01 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/11/23 11:10:55 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	julia(t_mlx *mlx, int x, int y)
 
 	z_r = (x - W / 2) / mlx->img.zoom + mlx->fractal.x;
 	z_i = (y - H / 2) / mlx->img.zoom + mlx->fractal.y;
-	c_r = mlx->win.mouse_x / mlx->img.zoom;
-	c_i = mlx->win.mouse_y / mlx->img.zoom;
+	c_r = mlx->win.mouse_x / 500.0;
+	c_i = mlx->win.mouse_y / 500.0;
 	mlx->fractal.i = 0;
 	while ((z_r * z_r + z_i * z_i) < 4 && mlx->fractal.i++ < mlx->fractal.i_max)
 	{

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_fractal.c                                     :+:      :+:    :+:   */
+/*   fractal.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 22:08:43 by bfleury           #+#    #+#             */
-/*   Updated: 2016/11/23 08:07:35 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/11/23 10:57:02 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	init_fractal(t_mlx *mlx, int fractal)
 	mlx->fractal.x = 0;
 	mlx->fractal.y = 0;
 	mlx->img.zoom = W / 5;
+	mlx->fractal.pause = 0;
 	mlx->fractal.i_max = I_MAX;
 	mlx->fractal.choice = fractal;
 }

@@ -6,13 +6,13 @@
 #    By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/03 01:07:07 by bfleury           #+#    #+#              #
-#    Updated: 2016/11/22 20:44:55 by bfleury          ###   ########.fr        #
+#    Updated: 2016/11/23 10:13:14 by bfleury          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			= fractol
 TYPEFILE		= executable
-DEBUG			= TRUE
+DEBUG			= FALSE
 
 RED				= \033[31m
 YELLOW			= \033[33m
@@ -58,6 +58,8 @@ endif
 
 
 
+all:			libft mlx build $(NAME)
+
 $(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c
 				@$(CC) $(CFLAGS) -o $@ -c $<
 
@@ -66,8 +68,6 @@ $(NAME):		$(OBJ)
 				@echo $(PROJECT)
 				@$(CC) $(CFLAGS) $(FW) $(LIB_FLG) $(MLX_FLG) $(OBJ) -o $(NAME)
 				@echo $(SUCCESS)
-
-all:			libft mlx build $(NAME)
 
 build :
 				@mkdir -p $(OBJ_DIR)

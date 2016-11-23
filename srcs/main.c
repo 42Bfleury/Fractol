@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 09:57:26 by bfleury           #+#    #+#             */
-/*   Updated: 2016/11/23 08:10:48 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/11/23 10:56:25 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ int		main(int ac, char **av)
 {
 	int		fractal;
 
-	if (ac != 2 && ac != 3)
+	if (ac != 2)
 		die(NULL, "Usage : ./fractol <fractal>!");
 	fractal = ft_atoi(av[1]);
 	if ((ft_strlen(av[1]) != 1) || (ft_isdigit(av[1][0]) != 1)
-		|| fractal < 0 || fractal > 6)
+		|| fractal < 1 || fractal > 3)
 		die(NULL, "Usage : ./fractol <fractal>!");
 	init(fractal);
 	return (0);

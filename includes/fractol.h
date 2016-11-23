@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 04:00:16 by bfleury           #+#    #+#             */
-/*   Updated: 2016/11/23 08:59:44 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/11/23 10:30:21 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ typedef struct			s_window
 	char				*title;
 	int					width;
 	int					height;
-	int 				mouse_x;
+	int					mouse_x;
 	int					mouse_y;
 }						t_window;
 

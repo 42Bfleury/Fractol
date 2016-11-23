@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 22:08:43 by bfleury           #+#    #+#             */
-/*   Updated: 2016/11/23 07:42:26 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/11/23 08:07:35 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	print_fractal(t_mlx *mlx, int x, int y)
 {
 	if (mlx->fractal.choice == 1)
 		mandelbrot(mlx, x, y);
+	else if (mlx->fractal.choice == 2)
+		julia(mlx, x, y);
 	else if (mlx->fractal.choice == 3)
 		burning(mlx, x, y);
 }

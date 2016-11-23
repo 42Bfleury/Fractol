@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 09:56:56 by bfleury           #+#    #+#             */
-/*   Updated: 2016/11/23 07:46:14 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/11/23 08:59:51 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,10 @@ void		init(int fractal)
 	draw(&mlx);
 	mlx_hook(mlx.win.ptr, 17, 0, quit, &mlx);
 	mlx_hook(mlx.win.ptr, 2, 1, key_hook, &mlx);
+	mlx_hook(mlx.win.ptr, 6, 1, mouse_move, &mlx);
 	mlx_mouse_hook(mlx.win.ptr, mouse_hook, &mlx);
 	mlx_loop_hook(mlx.ptr, draw, &mlx);
+	print_instruction();
 	if (!mlx_loop(mlx.ptr))
 		die(&mlx, "Failed to initialize MLX loop!");
-	print_instruction();
 }

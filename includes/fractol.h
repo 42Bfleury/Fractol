@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 04:00:16 by bfleury           #+#    #+#             */
-/*   Updated: 2016/11/23 07:51:27 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/11/23 08:59:44 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ typedef struct			s_fractal
 {
 	int					i;
 	int					i_max;
+	int					pause;
 	int					choice;
 	float				x;
 	float				y;
@@ -62,6 +63,8 @@ typedef struct			s_window
 	char				*title;
 	int					width;
 	int					height;
+	int 				mouse_x;
+	int					mouse_y;
 }						t_window;
 
 typedef struct			s_mlx
@@ -75,16 +78,19 @@ typedef struct			s_mlx
 void					init(int fractal);
 void					print_instruction(void);
 void					die(t_mlx *mlx, char *msg);
+void					julia(t_mlx *mlx, int x, int y);
 void					burning(t_mlx *mlx, int x, int y);
 void					mandelbrot(t_mlx *mlx, int x, int y);
 void					init_fractal(t_mlx *mlx, int fractal);
 void					print_fractal(t_mlx *mlx, int x, int y);
+void					zoom(t_mlx *mlx, int key, int x, int y);
 void					image_put_pixel(t_mlx *mlx, int x, int y, t_color c);
 
 int						quit(t_mlx *mlx);
 int						draw(t_mlx *mlx);
 int						key_hook(int key, t_mlx *mlx);
 int						motion(int x, int y, t_mlx *mlx);
+int						mouse_move(int x, int y, t_mlx *mlx);
 int						mouse_hook(int key, int x, int y, t_mlx *mlx);
 
 #endif

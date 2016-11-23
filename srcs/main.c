@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 09:57:26 by bfleury           #+#    #+#             */
-/*   Updated: 2016/11/23 07:50:59 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/11/23 08:10:48 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,18 @@
 
 void	print_instruction(void)
 {
-	ft_putendl("--------------- Fract'ol ----------------");
-	ft_putendl("Move Up                               [^]");
-	ft_putendl("Move Down                             [v]");
-	ft_putendl("Move Left                             [<]");
-	ft_putendl("Move Right                            [>]");
-	ft_putendl("Change Fractal                        [F]");
-	ft_putendl("More Iteration                        [+]");
-	ft_putendl("Less Iteration                        [-]");
-	ft_putendl("Reset Fractal                     [SPACE]");
-	ft_putendl("Zoom In                     [SCROLL DOWN]");
-	ft_putendl("Zoom Out                      [SCROLL UP]");
+	ft_putendl("------------------ Fract'ol -------------------");
+	ft_putendl("Move Up                                     [^]");
+	ft_putendl("Move Down                                   [v]");
+	ft_putendl("Move Left                                   [<]");
+	ft_putendl("Move Right                                  [>]");
+	ft_putendl("Change Fractal                              [F]");
+	ft_putendl("More Iteration                              [I]");
+	ft_putendl("Less Iteration                              [K]");
+	ft_putendl("Reset Fractal                               [R]");
+	ft_putendl("Pause Fractal                           [SPACE]");
+	ft_putendl("Zoom In                       [SCROLL DOWN]/[+]");
+	ft_putendl("Zoom Out                        [SCROLL UP]/[-]");
 }
 
 int		main(int ac, char **av)

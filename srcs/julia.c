@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mandelbrot.c                                       :+:      :+:    :+:   */
+/*   julia.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/23 07:18:55 by bfleury           #+#    #+#             */
-/*   Updated: 2016/11/23 07:57:33 by bfleury          ###   ########.fr       */
+/*   Created: 2016/11/23 07:57:50 by bfleury           #+#    #+#             */
+/*   Updated: 2016/11/23 08:09:01 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-void	mandelbrot(t_mlx *mlx, int x, int y)
+void	julia(t_mlx *mlx, int x, int y)
 {
 	double	tmp;
 	double	z_r;
@@ -20,10 +20,10 @@ void	mandelbrot(t_mlx *mlx, int x, int y)
 	double	c_r;
 	double	c_i;
 
-	z_r = 0;
-	z_i = 0;
-	c_r = (x - W / 2) / mlx->img.zoom + mlx->fractal.x;
-	c_i = (y - H / 2) / mlx->img.zoom + mlx->fractal.y;
+	z_r = (x - W / 2) / mlx->img.zoom + mlx->fractal.x;
+	z_i = (y - H / 2) / mlx->img.zoom + mlx->fractal.y;
+	c_r = mlx->win.mouse_x / mlx->img.zoom;
+	c_i = mlx->win.mouse_y / mlx->img.zoom;
 	mlx->fractal.i = 0;
 	while ((z_r * z_r + z_i * z_i) < 4 && mlx->fractal.i++ < mlx->fractal.i_max)
 	{

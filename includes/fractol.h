@@ -6,7 +6,7 @@
 /*   By: bfleury <bfleury@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 04:00:16 by bfleury           #+#    #+#             */
-/*   Updated: 2016/11/23 10:30:21 by bfleury          ###   ########.fr       */
+/*   Updated: 2016/12/11 03:37:31 by bfleury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@
 # include "../minilibx/includes/mlx.h"
 # include <math.h>
 # include <stdio.h>
-# include <time.h>
 
 typedef struct			s_color
 {
